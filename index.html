@@ -1,4 +1,56 @@
 <!doctype html> 
 <html lang="en">
-    Hello worlds!
+  <head> 
+  	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="Koen D. Berends" contents">
+    <title>Homepage</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <!-- EXTERNAL STYLE SHEETS-->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- LOCAL STYLE SHEETS-->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    
+    <!-- LOAD THIRDPARTY JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
+  </head>
+
+
+<body> 
+	<main>
+    <!-- -->
+		<a id='about_title' class='title icon' onclick="$('#about_content').toggleClass('opened');$('#about_title').toggleClass('about-active')">About me </a>
+		<div id='about_content' class='dropdown'>
+    <a href="https://www.linkedin.com/in/koenberends/">  <i class="fab fa-linkedin fa-4x"></i></a>
+    <a href="https://www.researchgate.net/profile/Koen_Berends"><i class="fab fa-researchgate fa-4x"></i></a>
+    <a href='https://people.utwente.nl/k.d.berends'><i class="fas fa-graduation-cap  fa-4x"></i></a>
+    <i class="fab fa-github   fa-4x"></i>
+  </div>
+
+    <!-- -->
+    <div id='project_title' class='title icon' onclick="$('#project_content').toggleClass('opened');$('#project_title').toggleClass('project-active')">Selected projects 
+      <div id='project_content' class='dropdown'>
+        
+        <div  id='project-rie' >
+          <a onmouseover="$('#tooltip').css('height', '100px')" onmouseleave="$('#tooltip').css('height', '0px')"  href='https://kdberends.github.io/rie' >
+            <img src="img/rie-icon.png"></img>
+          </a>
+        </div>
+
+      </div> 
+   </div>
+
+   <!-- -->
+   <div id='tooltip'></div>
+	</main>
+  <footer>&copy; 2018 K.D. Berends</footer>
+</body>
+
+
 </html>
