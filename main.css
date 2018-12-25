@@ -10,8 +10,8 @@ body {
 	font-family: 'Alegreya', sans-serif;
 	width: 100wh;
 	height: 90vh;
-	color: #fff;
-	 background-image: linear-gradient(to left top, #4d126d, #4c227c, #482f8b, #423c9a, #3948a8, #2c5ab7, #1b6ac4, #007bd0, #0093d9, #00a9d8, #00bccf, #21cdc2);
+	color: #fff; 
+	background-image: linear-gradient(to left top, #020037, #00094b, #000b5f, #000c74, #000989, #2d1f9b, #4834ad, #5f48c0, #8874d2, #afa2e3, #d6d0f2, #ffffff);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
@@ -22,14 +22,16 @@ body {
 
 main{
 	width: 400px;
-	max-width: 100%;
+	max-width: calc(100% - 20px);
 	margin-left: 20%;
 	margin-top: 100px;
+	height: auto;
+	transition: all 0.2s ease;
 }
 
 @media only screen and (max-width: 600px) {
   main {
-    margin-left: 0px;
+    margin-left: 10px;
   }
 }
 
@@ -38,6 +40,8 @@ main{
 	font-size: 22px;
 	color: #FFFFFF;
 	cursor: pointer;
+	max-height: 30px;
+	transition: max-height 1s ease;
 }
 
 
@@ -50,21 +54,22 @@ main{
   position: absolute;
   transition: all 0.5s ease;
 }
+
 .title:before {
-  border-top: 1px solid;
-  border-left: 1px solid;
-  top: -5px;
-  left: -10px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  top: 0px;
+  left: 0px;
 }
+
 .title:after {
-  border-bottom: 1px solid;
-  border-right: 1px solid;
-  top:20px;
-  left: 300px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  bottom:0px;
+  left: calc(100% - 10px);
 }
 
 .about-active:after{
-	transform: translate(0px, 160px);
 }
 
 
@@ -74,14 +79,19 @@ main{
 }
 
 
-
+.dropdowncontainer{
+	overflow:hidden;
+}
 .dropdown{
-	position: relative;
-	background-color: #FFFFFF55;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:  space-between;
 	transition: all 0.5s ease;
+	transform: translate(0, -200%);
 	color: white;
-	height: 0px;
-	width: 300px;
+	width: calc(100% - 20px);
+	height: 0%;
 	overflow: hidden;
 	font-size: 13px;
 }
@@ -91,7 +101,6 @@ a
 }
 
 .dropdown i {
-	margin: 10px;
 	transition: all 0.3s ease;
 	cursor: pointer;
 }
@@ -100,17 +109,18 @@ a
 	border-bottom: 1px solid black;
 }
 
-
+.title-active{
+	height: auto;
+	max-height: 300px;
+	
+}
 
 .opened{
-	height: 150px;
+	height: 100%;
+	transform: translate(0, 0px);
 }
 
-@media only screen and (max-width: 600px) {
-  .opened {
-    height: 200px;
-  }
-}
+
 
 .largeicon{
 	font: 100px;
@@ -121,7 +131,7 @@ a
 }
 
 
-#project_content div{
+#project_content .projecticon{
 	position: absolute;
 	width: 47px;
 	height: 47px;
@@ -154,10 +164,11 @@ a
 }
 
 #tooltip{
-	position:absolute;
-	top: 500px;
+	position: relative;
+	margin-top: 60px;
 	width: 300px;
-	height: 0px;
+	height: 50px;
+	border-radius: 3px;
 	background-color: #00000099;
 	transition: all 0.2s ease;
 }

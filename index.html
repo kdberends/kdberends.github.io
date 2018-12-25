@@ -25,29 +25,33 @@
 <body> 
 	<main>
     <!-- -->
-		<a id='about_title' class='title icon' onclick="$('#about_content').toggleClass('opened');$('#about_title').toggleClass('about-active')">About me </a>
-		<div id='about_content' class='dropdown'>
-    <a href="https://www.linkedin.com/in/koenberends/">  <i class="fab fa-linkedin fa-4x"></i></a>
-    <a href="https://www.researchgate.net/profile/Koen_Berends"><i class="fab fa-researchgate fa-4x"></i></a>
-    <a href='https://people.utwente.nl/k.d.berends'><i class="fas fa-graduation-cap  fa-4x"></i></a>
-    <i class="fab fa-github   fa-4x"></i>
+		<div id='about_title' class='title icon' onclick="$('#about_content').toggleClass('opened');$('#about_title').toggleClass('title-active')">About me 
+      <div class='dropdowncontainer'>
+  		<div id='about_content' class='dropdown'>
+        <a href="https://www.linkedin.com/in/koenberends/">  <i class="fab fa-linkedin fa-4x"></i></a>
+        <a href="https://www.researchgate.net/profile/Koen_Berends"><i class="fab fa-researchgate fa-4x"></i></a>
+        <a href='https://people.utwente.nl/k.d.berends'><i class="fas fa-graduation-cap  fa-4x"></i></a>
+        <i class="fab fa-github   fa-4x"></i>
+    </div>
   </div>
+</div>
 
     <!-- -->
     <div id='project_title' class='title icon' onclick="$('#project_content').toggleClass('opened');$('#project_title').toggleClass('project-active')">Selected projects 
-      <div id='project_content' class='dropdown'>
-        
-        <div  id='project-rie' >
-          <a onmouseover="$('#tooltip').css('height', '100px')" onmouseleave="$('#tooltip').css('height', '0px')"  href='https://kdberends.github.io/rie' >
-            <img src="img/rie-icon.png"></img>
-          </a>
-        </div>
-
-      </div> 
+      <div class='dropdowncontainer'>
+        <div id='project_content' class='dropdown'>
+          <div  class='projecticon' id='project-rie' >
+            <a href='https://kdberends.github.io/rie' >
+              <img src="img/rie-icon.png"></img>
+            </a>
+          </div>
+          <div id='tooltip'></div>
+        </div> 
+      </div>
    </div>
 
    <!-- -->
-   <div id='tooltip'></div>
+   
 	</main>
   <footer>&copy; 2018 K.D. Berends</footer>
 </body>
