@@ -1,11 +1,4 @@
-/*
-body {
-	background-color: #302F2F;
-	background: linear-gradient(-45deg, #EE7752, #331C71, #23A6D5, #23D5AB);
-	animation: gradient-animation 4s ease infinite;
-	font-family: 'Alegreya', sans-serif;
-}
-*/
+
 body {
 	font-family: 'Alegreya', sans-serif;
 	width: 100wh;
@@ -19,6 +12,17 @@ body {
 	overflow: hidden;
 }
 
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
 
 main{
 	width: 400px;
@@ -34,6 +38,17 @@ main{
     margin-left: 10px;
   }
 }
+
+a{	
+	color: white;
+}
+
+footer {
+	position: absolute;
+	color: white;
+	bottom: 5px;
+}
+
 
 .title{
 	position: relative;
@@ -59,7 +74,7 @@ main{
   border-top: 2px solid;
   border-left: 2px solid;
   top: 0px;
-  left: 0px;
+  left: -5px;
 }
 
 .title:after {
@@ -69,19 +84,10 @@ main{
   left: calc(100% - 10px);
 }
 
-.about-active:after{
-}
-
-
-
-.project-active:after{
-	transform: translate(0px, 160px);
-}
-
-
 .dropdowncontainer{
 	overflow:hidden;
 }
+
 .dropdown{
 	display: flex;
 	flex-direction: row;
@@ -96,31 +102,15 @@ main{
 	font-size: 13px;
 }
 
-a
-{	color: white;
-}
-
 .dropdown i {
 	transition: all 0.3s ease;
 	cursor: pointer;
 }
 
+
 #about_content.dropdown i:hover{
 	border-bottom: 1px solid black;
 }
-
-.title-active{
-	height: auto;
-	max-height: 300px;
-	
-}
-
-.opened{
-	height: 100%;
-	transform: translate(0, 0px);
-}
-
-
 
 .largeicon{
 	font: 100px;
@@ -132,14 +122,14 @@ a
 
 
 #project_content .projecticon{
-	position: absolute;
+	position: relative;
 	width: 47px;
 	height: 47px;
 	padding: 10px;
 }
 
 #project_content img{
-	position: absolute;
+	position: relative;
 	width: 45px;
 	height: 45px;
 	border-radius: 10px;
@@ -149,35 +139,33 @@ a
 	box-shadow: 0 0 5px #FFFFFF;
 }
 
-
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+.activated-project{
+	box-shadow: 0 0 5px #FFFFFF;
 }
 
 #tooltip{
 	position: relative;
-	margin-top: 60px;
-	width: 300px;
-	height: 50px;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
 	border-radius: 3px;
 	background-color: #00000099;
 	transition: all 0.2s ease;
+	padding: 5px;
+	font-family: Roboto, sans-serif;
 }
 
-
-
-
-footer {
-	position: absolute;
-	color: white;
-	bottom: 5px;
+#tooltip a{
+	color: #C55500;
 }
+
+.title-active{
+	height: auto;
+	max-height: 300px;
+}
+
+.opened{
+	height: 100%;
+	transform: translate(0, 0px);
+}
+
